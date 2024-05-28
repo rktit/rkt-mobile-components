@@ -3,12 +3,9 @@ import { StyleSheet } from "react-native";
 import Config from "react-native-config";
 import { Container, Input, Item, Text } from "../../components";
 import { ContentContainer } from "../../containers";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
-import { RootStackParamList } from "../../routes/navigationStackParams";
 import useInputs from "./InputHooks";
 
 export default function Home() {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   console.log("API_URL:", Config.API_URL);
 
   const { control } = useInputs();

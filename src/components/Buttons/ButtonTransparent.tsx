@@ -5,13 +5,6 @@ import { IButton } from ".";
 import Svg from "../../assets/images/Svg";
 import { Colors } from "../../styles/themeStyle";
 
-interface IBtnTransparent {
-  text?: string;
-  color?: string;
-  style?: object;
-  disabled?: boolean;
-}
-
 const BtnTransparent = ({
   text,
   color,

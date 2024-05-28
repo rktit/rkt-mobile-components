@@ -1,9 +1,9 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import Config from "react-native-config";
-import { Button, Container, Item, Text } from "../../components";
+import { Button, Container, Item } from "../../components";
 import { Colors } from "../../styles/themeStyle";
-import { ContentContainer, TopContainer } from "../../containers";
+import { ContentContainer } from "../../containers";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../../routes/navigationStackParams";
 

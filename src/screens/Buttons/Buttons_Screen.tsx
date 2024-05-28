@@ -1,14 +1,11 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 import Config from "react-native-config";
 import { Button, Container, Item, Text } from "../../components";
 import { Colors } from "../../styles/themeStyle";
-import { ContentContainer, TopContainer } from "../../containers";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
-import { RootStackParamList } from "../../routes/navigationStackParams";
+import { ContentContainer } from "../../containers";
 
 export default function Home() {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   console.log("API_URL:", Config.API_URL);
 
   return (

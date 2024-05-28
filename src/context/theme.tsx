@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext } from "react";
 import { ThemeProvider } from "styled-components";
 
 interface IThemeProps {

@@ -1,4 +1,4 @@
-import { Control, Controller, FieldError, FieldErrors } from "react-hook-form";
+import { Control, Controller, FieldError } from "react-hook-form";
 import InputText from "./InputText";
 import { View, Text as TextNative } from "react-native";
 import { InputStyle } from "../../styles/inputStyle";
