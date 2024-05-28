@@ -1,7 +1,11 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native';
+import Config from "react-native-config";
 
 export default function Home() {
+  
+  console.log('API_URL:', Config.API_URL);
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Home</Text>
