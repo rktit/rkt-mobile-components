@@ -1,0 +1,15 @@
+{
+  "translation": {
+    "login": {
+      "formulario": {
+        "titulo": "Faça seu login",
+        "email": "E-mail",
+        "senha": "Senha",
+        "logar": "Logar",
+        "esqueciSenha": "Esqueci minha senha"
+      },
+      "registro": "Ainda não possui cadastro?",
+      "cliqueAqui": "Clique aqui"
+    }
+  }
+}
