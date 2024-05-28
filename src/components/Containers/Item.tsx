@@ -24,6 +24,7 @@ interface IItem {
   type?: TypesList;
   align?: AlignList;
   children: React.ReactElement<any>;
+  style?: object;
 }
 
 const Item = ({
@@ -39,6 +40,7 @@ const Item = ({
   type = "item",
   align = "center",
   children,
+  style
 }: IItem) => {
   return (
     <View
@@ -47,6 +49,7 @@ const Item = ({
         stylesItemPadding(pl, pr, pt, pb).item,
         stylesItemMargin(ml, mr, mt, mb).item,
         stylesItemAlign[align],
+        style
       ]}
     >
       {children}

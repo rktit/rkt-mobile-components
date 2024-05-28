@@ -7,6 +7,7 @@ const enum Colors {
   greyLight = "#F9F9F9",
   lighter = "#FFFFFF",
   disabled = "#E3E3E3",
+  success = "#00FF00",
   error = "#FF0000",
   errorBackground = "#FFD7D7",
 }
@@ -21,6 +22,7 @@ const theme = {
       greyLight: Colors.greyLight,
       lighter: Colors.lighter,
       disabled: Colors.disabled,
+      success: Colors.success,
       error: Colors.error,
       errorBackground: Colors.errorBackground,
     },

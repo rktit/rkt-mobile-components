@@ -1,5 +1,6 @@
 export type RootStackParamList = {
   Splash: undefined;
-  Home: undefined;
-  Login: undefined;
+  Home_Screen: undefined;
+  Buttons_Screen: undefined;
+  Inputs_Screen: undefined;
 };

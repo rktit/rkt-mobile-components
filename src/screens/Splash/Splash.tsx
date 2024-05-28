@@ -1,27 +1,26 @@
 import { useEffect } from "react";
-import { View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
-import Animated, { FadeIn } from "react-native-reanimated";
+import Animated, { FadeInUp, FadeOut } from "react-native-reanimated";
 
 import { RootStackParamList } from "../../routes/navigationStackParams";
-import Svg from "../../assets/images/Svg";
+import { Colors } from "../../styles/themeStyle";
 
 export default function Splash() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate("Home");
+      navigation.navigate("Home_Screen");
     }, 3000);
   }, []);
   return (
     <View style={styles.container}>
-      <Animated.View entering={FadeIn}>
-        <Svg
-          image="logo"
-          height={500}
-          width={Dimensions.get("screen").width - 112}
+      <Animated.View entering={FadeInUp.duration(1500)} exiting={FadeOut}>
+        <Image
+          source={require("../../assets/images/logo.png")}
           style={styles.image}
+          resizeMode="contain"
         />
       </Animated.View>
     </View>
@@ -31,15 +30,15 @@ export default function Splash() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F9F9F9",
+    backgroundColor: Colors.secondary,
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "center",
     width: "100%",
   },
   image: {
     flex: 1,
-    maxWidth: 500,
-    maxHeight: 500,
+    maxWidth: "90%",
+    maxHeight: "100%",
     justifyContent: "center",
   },
   pet: {

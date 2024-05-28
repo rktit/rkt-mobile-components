@@ -42,6 +42,15 @@ npm run ios
 yarn ios
 ```
 
+### For Create Tags
+
+```bash
+# using npm
+git tag <tagname>
+
+git push origin <tag>
+```
+
 If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.

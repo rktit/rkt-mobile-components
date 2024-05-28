@@ -67,7 +67,7 @@ const InputStyle = styled(View) <InputProps>`
       props.theme.app.colors.error :
       !props.actived
         ? props.theme.app.colors.white
-        : props.theme.app.colors.primary};
+        : props.theme.app.colors.success};
 `;
 
 export { stylesInput, InputStyle };

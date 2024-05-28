@@ -8,16 +8,8 @@ interface IThemeProps {
 
 const ThemeContext = createContext({ theme: "light" });
 
-const ConfigProvider = ({ children, theme }: IThemeProps) => {
-  return (
-    <ThemeContext.Provider
-      value={{
-        theme: "light",
-      }}
-    >
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </ThemeContext.Provider>
-  );
+const RktThemeProvider = ({ children, theme }: IThemeProps) => {
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
-export { ThemeContext, ConfigProvider };
+export { ThemeContext, RktThemeProvider };

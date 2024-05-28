@@ -4,28 +4,20 @@ import { Container } from "../components";
 
 interface ITopContainer {
   readonly children: React.ReactNode;
+  readonly style?: object;
 }
 
-export default function TopContainer({ children }: ITopContainer) {
+export default function TopContainer({ children, style }: ITopContainer) {
   return (
     <Container
       padding={false}
-      style={{
+      style={[{
         backgroundColor: "#fff",
-        height: 175,
-        maxHeight: 175,
-      }}
+        height: 124,
+        maxHeight: 124,
+      }, style]}
     >
       {children}
     </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  image: {
-    width: 200,
-    maxHeight: 40,
-    flex: 1,
-    justifyContent: "center",
-  },
-});

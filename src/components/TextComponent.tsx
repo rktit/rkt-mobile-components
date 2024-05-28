@@ -1,5 +1,5 @@
 import React from "react";
-import { Text as TextBase } from "react-native";
+import { DimensionValue, Text as TextBase } from "react-native";
 import { stylesBase, stylesFont } from "../styles/fontStyle";
 import { Colors } from "../styles/themeStyle";
 import { useTranslation } from "react-i18next";
@@ -12,6 +12,8 @@ export interface IFonts {
   color?: string;
   testID?: string;
   underline?: boolean;
+  align?: "center" | "left" | "right" | "justify";
+  width?: DimensionValue;
 }
 
 const Text = ({
@@ -20,7 +22,9 @@ const Text = ({
   color = Colors.secondary,
   weight = "regular",
   testID = "text-id",
-  underline = false
+  underline = false,
+  align = "center",
+  width,
 }: IFonts): React.ReactNode => {
   const { t } = useTranslation();
 
@@ -29,6 +33,8 @@ const Text = ({
       testID={testID}
       style={[stylesBase(color)[weight], stylesFont[type], {
         textDecorationLine: underline ? "underline" : "none",
+        textAlign: align,
+        width: width,
       }]}
     >
       {t(text)}
