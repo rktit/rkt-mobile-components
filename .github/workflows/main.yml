@@ -20,19 +20,29 @@ jobs:
           git config --local user.name "Luiz Ricardo"
           git tag -a v${{ steps.autotag.outputs.version }} -m "Release v${{ steps.autotag.outputs.version }}"
       
-      - name: Create changelog
+      - name: Create changelog text
         id: changelog
         uses: loopwerk/tag-changelog@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           exclude_types: other,doc,chore
+          config_file: .github/tag-changelog-config.js
+      
+      - uses: BobAnkh/auto-generate-changelog@v1.2.5
+        with:
+          REPO_NAME: '<YourUserName>/<YourRepoName>'
+          ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          PATH: 'CHANGELOG.md'
+          COMMIT_MESSAGE: ${{ steps.changelog.outputs.changes }}
 
       - name: Create Release
         uses: actions/create-release@v1
         with:
           tag_name: v${{ steps.autotag.outputs.version }}
           release_name: Release v${{ steps.autotag.outputs.version }}
+          body: ${{ steps.changelog.outputs.changes }}
           draft: false
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
