@@ -1,7 +1,7 @@
 {
   "name": "rocket_mobile_components",
   "description": "Rocket Mobile Components is a library of reusable components for React Native applications.",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -88,7 +88,11 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/rktit/rkt-mobile-componentts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rktit/rkt-mobile-components"
+  },
+  "author": "Luiz Ricardo F Constantino",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -100,8 +104,27 @@
       "requireCleanWorkingDir": false
     },
     "npm": {
-      "publish": true,
+      "publish": false,
       "private": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {}
+          ]
+        }
+      }
     }
   },
   "plugins": {
