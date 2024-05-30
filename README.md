@@ -27,7 +27,9 @@ You've successfully run and use ower components in your project React Native App
 
 
 - [React Native](https://reactnative.dev)
+
 - [Styled Components](https://styled-components.com/)
+
 - [i18next](https://www.i18next.com/): i18next is an internationalization-framework written in and for JavaScript.
 
 - [react-hook-form](https://reactnative.dev): Performant, flexible and extensible forms with easy-to-use validation.

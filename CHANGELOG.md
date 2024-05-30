@@ -1,6 +1,10 @@
 ## [0.1.5](https://github.com/rktit/rkt-mobile-components/releases/tag/v0.1.5) (2024-05-30)
 
 
+### UPDATE
+
+* Ajuste das actions do github
+
 ### Bug Fixes
 
 * criação do novo arquivo para release e ajuste de CHANGELOG
