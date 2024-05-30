@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v2
       - uses: Klemensas/action-autotag@stable
@@ -29,13 +31,14 @@ jobs:
           config_file: .github/tag-changelog-config.js
 
       - name: Commit CHANGELOG.md
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: main
+          commit_options: '--no-verify --signoff'
           commit_message: '${{ steps.changelog.outputs.changes }}'
           file_pattern: CHANGELOG.md
-          writeToFile: true
-
+          status_options: '--untracked-files=no'
+          
       - name: Create Release
         uses: actions/create-release@v1
         with:
