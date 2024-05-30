@@ -1,6 +1,6 @@
 {
   "name": "rocket_mobile_components",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -13,7 +13,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint --ext .tsx --ext .ts src/",
-    "prepare": "bob build"
+    "prepare": "bob build",
+    "release": "release-it --no-git.requireUpstream"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.0",
@@ -81,6 +82,27 @@
       "module",
       "typescript"
     ]
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": "https://github.com/rktit/rkt-mobile-componentts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release :rocket: v${version}",
+      "tagName": "v${version}",
+      "requireUpstream": false,
+      "requireCleanWorkingDir": false
+    },
+    "npm": {
+      "publish": true,
+      "private": false
+    }
   },
   "engines": {
     "node": ">=18"
