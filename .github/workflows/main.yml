@@ -13,6 +13,15 @@ jobs:
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           tag_prefix: "v"
+      - name: Checkout code
+        run: |
+          git config --local user.email "lricardo@outlook.com"
+          git config --local user.name "Luiz Ricardo"
+          git tag -a v${{ steps.previous_step.outputs.version }} -m "Release v${{ steps.previous_step.outputs.version }}"
+      - name: Push Tag
+        run: git push origin v${{ github.run_number }}
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Create changelog
         id: changelog
@@ -24,8 +33,8 @@ jobs:
       - name: Create Release
         uses: actions/create-release@v1
         with:
-          tag_name: v${{ steps.previous_step.outputs.version }}
-          release_name: Release v${{ steps.previous_step.outputs.version }}
+          tag_name: v${{ github.run_number }}
+          release_name: Release v${{ github.run_number }}
           draft: false
           prerelease: false
         env:
