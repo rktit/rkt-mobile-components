@@ -1,20 +1,11 @@
 {
   "name": "rocket_mobile_components",
-  "version": "0.1.5",
-  "private": false,
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
-  "react-native": "src/index",
-  "source": "src/index",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint --ext .tsx --ext .ts src/",
-    "prepare": "bob build",
-    "release": "release-it --no-git.requireUpstream"
+    "start": "react-native start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.0",
@@ -75,15 +66,6 @@
     "ts-jest": "^29.1.1",
     "typescript": "*"
   },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module",
-      "typescript"
-    ]
-  },
   "keywords": [
     "react-native",
     "ios",
@@ -92,26 +74,6 @@
   "repository": "https://github.com/rktit/rkt-mobile-componentts",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release :rocket: v${version}",
-      "tagName": "v${version}",
-      "requireUpstream": false,
-      "requireCleanWorkingDir": false
-    },
-    "npm": {
-      "publish": true,
-      "private": false
-    }
-  },
-  "plugins": {
-    "@release-it/conventional-changelog": {
-      "preset": {
-        "name": "angular"
-      },
-      "infile": "CHANGELOG.md"
-    }
   },
   "engines": {
     "node": ">=18"
