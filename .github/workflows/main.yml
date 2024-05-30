@@ -34,6 +34,7 @@ jobs:
           branch: main
           commit_message: '${{ steps.changelog.outputs.changes }}'
           file_pattern: CHANGELOG.md
+          writeToFile: true
 
       - name: Create Release
         uses: actions/create-release@v1
