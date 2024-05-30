@@ -5,22 +5,40 @@ on:
     branches:
       - main
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: Klemensas/action-autotag@stable
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_prefix: "v"
-        changelog_structure: "**{{messageHeadline}}** {{author}}\n"
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: |
-          Changes in this Release
-          - First Change
-          - Second Change
-        draft: false
-        prerelease: false
-        
+  steps:
+    changelog:
+      exclude:
+        labels:
+          - ignore-for-release
+        authors:
+          - octocat
+      categories:
+        - title: Breaking Changes 🛠
+          labels:
+            - Semver-Major
+            - breaking-change
+        - title: Exciting New Features 🎉
+          labels:
+            - Semver-Minor
+            - enhancement
+        - title: Other Changes
+          labels:
+            - "*"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - uses: Klemensas/action-autotag@stable
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_prefix: "v"
+          changelog_structure: "**{{messageHeadline}}** {{author}}\n"
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: false
