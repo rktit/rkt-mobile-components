@@ -3,4 +3,5 @@
 
 ### Bug Fixes
 
+* criação do novo arquivo para release e ajuste de CHANGELOG
 * ajustes de CHANGELOG ([f2b473e](https://github.com/rktit/rkt-mobile-components/commit/f2b473e6346655b4bc43b7c57fa110e2d653c060))
