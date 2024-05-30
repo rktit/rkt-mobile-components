@@ -5,7 +5,7 @@
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
-  "react-native": "src/App.tsx",
+  "react-native": "src/index",
   "source": "src/index",
   "scripts": {
     "android": "react-native run-android",
