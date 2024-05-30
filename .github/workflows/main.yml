@@ -11,7 +11,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Create Tag
-        run: git tag -a v${{ github.run_number }} -m "Release v${{ github.run_number }}"
+        run: |
+          git config --local user.email 'lricardo@outlook.com' "
+          git config --local user.name 'Luis Ricardo'"
+          git tag -a v${{ github.run_number }} -m "Release v${{ github.run_number }}"
       - name: Push Tag
         run: git push origin v${{ github.run_number }}
         env: 
