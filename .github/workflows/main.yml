@@ -8,19 +8,40 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    
-    - name: Create Tag
-      uses: Klemensas/action-autotag@stable
-      with:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        tag_prefix: "v"
-    
-    - name: Create changelog text
-      id: changelog
-      uses: loopwerk/tag-changelog@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        exclude_types: other,doc,chore
-        config_file: .github/tag-changelog-config.js
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Create Tag
+        run: |
+          git config --local user.email "
+          git config --local user.name "
+          git tag -a v${{ github.run_number }} -m "Release v${{ github.run_number }}"
+      - name: Push Tag
+        run: git push origin v${{ github.run_number }}
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release v${{ github.run_number }}
+          body: |
+            Changes in this Release:
+            - Added new feature
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update Change Log
+        id: changelog
+        uses: loopwerk/tag-changelog@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          exclude_types: other,doc,chore
+          config_file: .github/tag-changelog-config.js
+      - name: Commit Change Log
+        run: |
+          git add CHANGELOG.md
+          git commit -m "Update CHANGELOG.md"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
