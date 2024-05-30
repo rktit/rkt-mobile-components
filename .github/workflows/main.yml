@@ -30,14 +30,18 @@ jobs:
           exclude_types: other,doc,chore
           config_file: .github/tag-changelog-config.js
 
-      - name: Commit CHANGELOG.md
+      - name: Update Changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          release-notes: ${{ github.event.release.body }}
+          latest-version: ${{ github.event.release.name }}
+
+      - name: Commit updated CHANGELOG
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: main
-          commit_options: '--no-verify --signoff'
-          commit_message: '${{ steps.changelog.outputs.changes }}'
+          branch: master
+          commit_message: Update CHANGELOG
           file_pattern: CHANGELOG.md
-          status_options: '--untracked-files=no'
           
       - name: Create Release
         uses: actions/create-release@v1
