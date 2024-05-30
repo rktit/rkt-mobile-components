@@ -28,19 +28,17 @@ jobs:
           exclude_types: other,doc,chore
           config_file: .github/tag-changelog-config.js
       
-      - uses: BobAnkh/auto-generate-changelog@v1.2.5
-        with:
-          REPO_NAME: '<YourUserName>/<YourRepoName>'
-          ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          PATH: 'CHANGELOG.md'
-          COMMIT_MESSAGE: ${{ steps.changelog.outputs.changes }}
+      - name: Create Release Notes
+        uses: Cossey/release-notes-generator-action@v2.1.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT_FOLDER: temp_release_notes
 
       - name: Create Release
         uses: actions/create-release@v1
         with:
           tag_name: v${{ steps.autotag.outputs.version }}
           release_name: Release v${{ steps.autotag.outputs.version }}
-          body: ${{ steps.changelog.outputs.changes }}
           draft: false
           prerelease: false
         env:
