@@ -1,0 +1,13 @@
+*.log
+.DS_Store
+.babelrc
+.prettierrc
+.editorconfig
+.eslintrc
+.travis.yml
+babel.config.js
+__tests__
+node_modules
+Examples
+example
+yarn.lock
