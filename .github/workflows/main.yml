@@ -19,10 +19,6 @@ jobs:
           git config --local user.email "lricardo@outlook.com"
           git config --local user.name "Luiz Ricardo"
           git tag -a v${{ steps.autotag.outputs.version }} -m "Release v${{ steps.autotag.outputs.version }}"
-      - name: Push Tag
-        run: git push origin v${{ steps.autotag.outputs.version }}
-        env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Create changelog
         id: changelog
