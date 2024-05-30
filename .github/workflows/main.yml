@@ -24,8 +24,8 @@ jobs:
       - name: Create Release
         uses: actions/create-release@v1
         with:
-          tag_name: v${{ steps.package-version.outputs.current-version}}
-          release_name: Release v${{ steps.package-version.outputs.current-version}}
+          tag_name: v${{ steps.previous_step.outputs.version }}
+          release_name: Release v${{ steps.previous_step.outputs.version }}
           draft: false
           prerelease: false
         env:
