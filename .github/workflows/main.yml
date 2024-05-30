@@ -27,19 +27,20 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           exclude_types: other,doc,chore
           config_file: .github/tag-changelog-config.js
-      
-      - name: Create Release Notes
-        uses: Cossey/release-notes-generator-action@v2.1.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILENAME_PREFIX: MyMilestone
-          USE_MILESTONE_TITLE: "true"
+
+      - name: Commit CHANGELOG.md
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: main
+          commit_message: '${{ steps.changelog.outputs.changes }}'
+          file_pattern: CHANGELOG.md
 
       - name: Create Release
         uses: actions/create-release@v1
         with:
           tag_name: v${{ steps.autotag.outputs.version }}
           release_name: Release v${{ steps.autotag.outputs.version }}
+          body: ${{ steps.changelog.outputs.changes }}
           draft: false
           prerelease: false
         env:
