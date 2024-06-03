@@ -5,6 +5,7 @@
 .editorconfig
 .eslintrc
 .travis.yml
+.vscode
 babel.config.js
 __tests__
 node_modules
