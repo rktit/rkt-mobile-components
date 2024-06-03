@@ -1,7 +1,7 @@
 {
   "name": "rocket_mobile_components",
   "description": "Rocket Mobile Components is a library of reusable components for React Native applications.",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "private": false,
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -14,8 +14,9 @@
     "start": "react-native start",
     "test": "jest --passWithNoTests",
     "lint": "eslint --ext .tsx --ext .ts src/",
-    "prepare": "husky",
-    "release": "release-it --no-git.requireUpstream"
+    "prepare": "bob build",
+    "release": "npm login && npm publish --access public",
+    "pre-release": "husky && release-it --no-git.requireUpstream"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.0",
@@ -95,9 +96,6 @@
     "url": "https://github.com/rktit/rkt-mobile-components"
   },
   "author": "Luiz Ricardo F Constantino",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "release-it": {
     "git": {
       "commitMessage": "chore: release :rocket: v${version}",
@@ -139,18 +137,6 @@
   "engines": {
     "node": ">=18"
   },
-  "jest": {
-    "preset": "react-native",
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation/(.*))"
-    ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/lib/"
-    ]
-  },
   "files": [
     "src",
     "lib",
@@ -171,5 +157,17 @@
   ],
   "src/**/*.ts": [
     "tsc-files --noEmit"
-  ]
+  ],
+  "jest": {
+    "preset": "react-native",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation/(.*))"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ]
+  }
 }

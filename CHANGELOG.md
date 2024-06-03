@@ -1,5 +1,12 @@
 
 
+## [0.1.14](https://github.com/rktit/rkt-mobile-components/compare/v0.1.13...v0.1.14) (2024-06-03)
+
+
+### Bug Fixes
+
+* ajuste na estrutura para buld e uso do Text component ([14a0ab1](https://github.com/rktit/rkt-mobile-components/commit/14a0ab1c3f1eeffb182e5eeba3ef90d7ebd2ab65))
+
 ## [0.1.13](https://github.com/rktit/rkt-mobile-components/compare/v0.1.10...v0.1.13) (2024-06-03)
 
 
