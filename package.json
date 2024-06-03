@@ -14,9 +14,7 @@
     "start": "react-native start",
     "test": "jest --passWithNoTests",
     "lint": "eslint --ext .tsx --ext .ts src/",
-    "prepare": "bob build",
-    "release": "npm login && npm publish --access public",
-    "pre-release": "husky && release-it --no-git.requireUpstream"
+    "prepare": "husky && release-it --no-git.requireUpstream && bob build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.0",
