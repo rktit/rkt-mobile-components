@@ -106,8 +106,7 @@
       "requireCleanWorkingDir": false
     },
     "npm": {
-      "publish": false,
-      "private": false
+      "publish": false
     },
     "plugins": {
       "@release-it/conventional-changelog": {
