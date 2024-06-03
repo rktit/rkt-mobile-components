@@ -1,5 +1,12 @@
 
 
+## [0.1.13](https://github.com/rktit/rkt-mobile-components/compare/v0.1.10...v0.1.13) (2024-06-03)
+
+
+### Bug Fixes
+
+* ajuste da estrutura para commit e release ([6a740b5](https://github.com/rktit/rkt-mobile-components/commit/6a740b55b6b933cfa826ffde8d88bdbe41d6ff51))
+
 ## [0.1.12](https://github.com/rktit/rkt-mobile-components/compare/v0.1.10...v0.1.12) (2024-06-03)
 
 ## [0.1.11](https://github.com/rktit/rkt-mobile-components/compare/v0.1.10...v0.1.11) (2024-06-03)
