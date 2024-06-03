@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from 'react';
 import { DimensionValue, Text as TextBase } from "react-native";
 import { stylesBase, stylesFont } from "../styles/fontStyle";
 import { Colors } from "../styles/themeStyle";
@@ -42,4 +42,4 @@ const Text = ({
   );
 };
 
-export default Text;
+export default memo(Text);

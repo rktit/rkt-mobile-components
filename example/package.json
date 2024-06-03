@@ -72,9 +72,6 @@
     "android"
   ],
   "repository": "https://github.com/rktit/rkt-mobile-componentts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "engines": {
     "node": ">=18"
   },
