@@ -1,6 +1,6 @@
 {
   "name": "rkt-mobile-components",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Rocket Mobile Components is a library of reusable components for React Native applications.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
