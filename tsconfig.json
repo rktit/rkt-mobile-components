@@ -1,26 +1,30 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "rootDir": ".",
     "paths": {
-      "rocket_mobile_components": [
-        "./src/index"
-      ]
+      "rkt-mobile-components": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "jsx": "react",
+    "lib": ["esnext"],
     "module": "esnext",
+    "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
-    "noEmit": false,
     "noImplicitReturns": true,
     "noImplicitUseStrict": false,
     "noStrictGenericChecks": false,
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
-    "target": "esnext"
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "verbatimModuleSyntax": true,
+    "noImplicitAny": false,
+    "skipDefaultLibCheck": true
   }
 }

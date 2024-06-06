@@ -1,39 +1,37 @@
-This is a new [**React Native**](https://reactnative.dev) project to create new projetcts with components pre created using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# rkt-mobile-components
 
+Simple components for the React Native projects
 
-# Getting Started
+## Installation
 
->**Note**: Use dont need more steps install and use ower components.
+```sh
+npm install rkt-mobile-components
 
-## Step 1: Install this package
+# or
 
-You can use:
-
-```bash
-# using npm
-npm i rocket-mobile-components@latest
-or
-npm install rocket-mobile-components@latest
-
-# OR using Yarn
-yarn add rocket-mobile-components@latest
+yarn add rkt-mobile-components
 ```
 
-## Congratulations! :tada:
+## Usage
 
-You've successfully run and use ower components in your project React Native App. :partying_face:
+```js
+import { Text } from 'rkt-mobile-components';
+```
 
-# Libraries used
+## Logs
 
+See the [CHANGELOGS](CHANGELOG.md) to learn about new features, updates, fixes etc.
 
-- [React Native](https://reactnative.dev)
+## Contributing
 
-- [Styled Components](https://styled-components.com/)
+See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
-- [i18next](https://www.i18next.com/): i18next is an internationalization-framework written in and for JavaScript.
+## License
 
-- [react-hook-form](https://reactnative.dev): Performant, flexible and extensible forms with easy-to-use validation.
+MIT
 
-- [react-native-mask-input](https://www.npmjs.com/package/react-native-mask-input): A simple and effective Text Input with mask for ReactNative on iOS, Android, and Web
+---
 
-- [Yup](https://github.com/jquense/yup): Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformation.
+Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+
+<!-- //"rkt-mobile-components": "file:./lib/rkt-mobile-components", -->

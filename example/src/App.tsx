@@ -1,22 +1,13 @@
-import React from "react";
-import { StatusBar } from "react-native";
-import Routes from "./routes/Routes";
-import "./utils/i18n/i18n";
-import { AuthProvider } from "./context/auth";
-import { theme } from "./styles/themeStyle";
-import { RktThemeProvider } from "./context/theme";
+import React from 'react';
+import { Text, View } from 'react-native';
+import { Item } from 'rkt-mobile-components';
 
 export default function App() {
   return (
-    <RktThemeProvider theme={theme}>
-      <StatusBar
-        barStyle="dark-content"
-        backgroundColor="transparent"
-        translucent
-      />
-      <AuthProvider>
-        <Routes />
-      </AuthProvider>
-    </RktThemeProvider>
+    <View>
+      <Item>
+        <Text>Teste</Text>
+      </Item>
+    </View>
   );
 }

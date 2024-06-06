@@ -1,3 +1,4 @@
+import React from "react";
 import { TouchableOpacity } from "react-native";
 import Svg from "../../assets/images/Svg";
 import {
@@ -6,7 +7,7 @@ import {
   stylesBtnSizes,
   stylesButton,
 } from "../../styles/buttonStyle";
-import { IButton } from ".";
+import { type IButton } from ".";
 import useButton from "./ButtonHooks";
 import { Colors } from "../../styles/themeStyle";
 

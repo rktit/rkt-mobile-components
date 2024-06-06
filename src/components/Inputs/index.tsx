@@ -1,8 +1,8 @@
-import { Control, Controller, FieldError } from "react-hook-form";
-import InputText from "./InputText";
-import { View, Text as TextNative } from "react-native";
-import { InputStyle } from "../../styles/inputStyle";
-import { useState } from "react";
+import React, { useState } from 'react';
+import { type Control, Controller, type FieldError } from 'react-hook-form';
+import InputText from './InputText';
+import { View, Text as TextNative } from 'react-native';
+import { InputStyle } from '../../styles/inputStyle';
 
 interface IInputController {
   control: Control<any>;
@@ -15,7 +15,7 @@ const Input = ({ control, name }: IInputController) => {
   return (
     <View>
       <InputStyle actived={actived} error={!error}>
-        <View style={{ width: "100%" }}>
+        <View style={{ width: '100%' }}>
           <Controller
             control={control}
             name={name}

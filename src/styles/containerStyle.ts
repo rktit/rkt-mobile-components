@@ -1,4 +1,4 @@
-import { DimensionValue, StyleSheet } from "react-native";
+import { type DimensionValue, StyleSheet } from "react-native";
 
 const styleBox = (
   pdHorizontal: number,

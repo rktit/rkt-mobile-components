@@ -4,8 +4,8 @@ import Config from "react-native-config";
 import { Button, Container, Item } from "../../components";
 import { Colors } from "../../styles/themeStyle";
 import { ContentContainer } from "../../containers";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
-import { RootStackParamList } from "../../routes/navigationStackParams";
+import { type NavigationProp, useNavigation } from "@react-navigation/native";
+import { type RootStackParamList } from "../../routes/navigationStackParams";
 
 export default function Home_Screen() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
