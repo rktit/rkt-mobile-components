@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity } from "react-native";
 import { Text } from "..";
 import Svg from "../../assets/images/Svg";
-import { IButton } from ".";
+import { type IButton } from ".";
 import useButton from "./ButtonHooks";
 import {
   stylesBtnDefault,

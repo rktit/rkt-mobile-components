@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { View, StyleSheet, Image } from "react-native";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { type NavigationProp, useNavigation } from "@react-navigation/native";
 import Animated, { FadeInUp, FadeOut } from "react-native-reanimated";
 
-import { RootStackParamList } from "../../routes/navigationStackParams";
+import { type RootStackParamList } from "../../routes/navigationStackParams";
 import { Colors } from "../../styles/themeStyle";
 
 export default function Splash() {

@@ -1,4 +1,5 @@
-import { View, StyleSheet, DimensionValue } from "react-native";
+import React from "react";
+import { View, StyleSheet, type DimensionValue } from "react-native";
 
 interface IContainer {
   children: React.ReactNode;

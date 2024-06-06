@@ -1,7 +1,7 @@
 import React from "react";
 import { TextInput } from "react-native";
 import { Colors } from "../../styles/themeStyle";
-import { FieldError } from "react-hook-form";
+import { type FieldError } from "react-hook-form";
 
 interface InputsProps {
   defaultValue?: string;
