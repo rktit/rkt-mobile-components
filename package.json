@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace rocket_mobile_components",
+    "example": "yarn workspace rocket_example",
     "test": "jest --passWithNoTests",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .tsx --ext .ts src/",
