@@ -1,8 +1,9 @@
-import { ImagesList } from "../../assets/images/Svg";
+import React from "react";
+import { type ImagesList } from "../../assets/images/Svg";
 import BtnTransparent from "./ButtonTransparent";
 import Button from "./Button";
 import BtnIcon from "./ButtonIcon";
-import { SizeTypes } from "../../types/style";
+import { type SizeTypes } from "../../types/style";
 
 export type VariantList = "button" | "transparent" | "link" | "icon";
 

@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
 
 const stylesBase = (color: string) =>
   StyleSheet.create({
@@ -43,4 +43,4 @@ const stylesFont = StyleSheet.create({
   },
 })
 
-export {stylesBase, stylesFont}
+export { stylesBase, stylesFont }

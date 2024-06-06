@@ -1,8 +1,8 @@
-import { Control, Controller, FieldError } from "react-hook-form";
+import React, { useState } from "react";
+import { type Control, Controller, type FieldError } from "react-hook-form";
 import InputText from "./InputText";
 import { View, Text as TextNative } from "react-native";
 import { InputStyle } from "../../styles/inputStyle";
-import { useState } from "react";
 
 interface IInputController {
   control: Control<any>;

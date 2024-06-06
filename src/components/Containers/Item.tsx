@@ -1,5 +1,5 @@
 import React from "react";
-import { DimensionValue, View } from "react-native";
+import { type DimensionValue, View } from "react-native";
 
 import {
   stylesItemAlign,
@@ -23,7 +23,7 @@ interface IItem {
   width?: DimensionValue;
   type?: TypesList;
   align?: AlignList;
-  children: React.ReactElement<any>;
+  children: React.ReactNode;
   style?: object;
 }
 

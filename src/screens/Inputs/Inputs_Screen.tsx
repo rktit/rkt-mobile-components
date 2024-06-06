@@ -1,13 +1,10 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import Config from "react-native-config";
 import { Container, Input, Item, Text } from "../../components";
 import { ContentContainer } from "../../containers";
 import useInputs from "./InputHooks";
 
 export default function Home() {
-  console.log("API_URL:", Config.API_URL);
-
   const { control } = useInputs();
 
   return (

@@ -1,5 +1,5 @@
 import { Colors } from "../../styles/themeStyle";
-import { FontTypesList } from "../../types/style";
+import { type FontTypesList } from "../../types/style";
 
 interface IButton {
   fontColor: (disabled: boolean, type: string, color?: string) => string;

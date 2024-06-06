@@ -1,9 +1,9 @@
 import {
-  Control,
-  FieldErrors,
-  FieldValues,
-  SubmitHandler,
-  UseFormHandleSubmit,
+  type Control,
+  type FieldErrors,
+  type FieldValues,
+  type SubmitHandler,
+  type UseFormHandleSubmit,
   useForm,
 } from "react-hook-form";
 
@@ -41,7 +41,7 @@ const useInputs = (): ILogin => {
       email: "email@email.com",
     },
   });
-  
+
   console.log("🚀 ~ useLoginForm ~ errors, isValid:", errors, isValid)
 
   const onSubmit = (data: FieldValues) => {

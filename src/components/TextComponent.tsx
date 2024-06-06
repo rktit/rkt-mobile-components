@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
-import { DimensionValue, Text as TextBase } from "react-native";
+import { type DimensionValue, Text as TextBase } from "react-native";
 import { stylesBase, stylesFont } from "../styles/fontStyle";
 import { Colors } from "../styles/themeStyle";
 import { useTranslation } from "react-i18next";
-import { FontTypesList, WeightsList } from "../types/style";
+import { type FontTypesList, type WeightsList } from "../types/style";
 
 export interface IFonts {
   text: string;

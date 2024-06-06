@@ -1,3 +1,4 @@
+import React from "react";
 import { Container } from "../components";
 import { Colors } from "../styles/themeStyle";
 
