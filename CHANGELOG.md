@@ -1,5 +1,23 @@
 
 
+## [0.2.0](https://github.com/rktit/rkt-mobile-components/compare/v0.1.14...v0.2.0) (2024-06-06)
+
+
+### Features
+
+* ajuste para build e react native library ([e2c2141](https://github.com/rktit/rkt-mobile-components/commit/e2c214135516b015f9cf9d11b72670a19b3ccbcc))
+* v0.1.15 ([f035476](https://github.com/rktit/rkt-mobile-components/commit/f035476121f85f059ea5054127bd79b2aa8773a1))
+
+
+### Bug Fixes
+
+* ajuste de commit e type config ([19ce7bc](https://github.com/rktit/rkt-mobile-components/commit/19ce7bcfa5866b63dc6c812dc2d1c3db9bb6830b))
+* ajuste de inputs ([1c30ae4](https://github.com/rktit/rkt-mobile-components/commit/1c30ae42812858ff9123418063d9906fce352f38))
+* ajuste do packge do example ([6031596](https://github.com/rktit/rkt-mobile-components/commit/6031596bd4c29012f046ede2cbaa18bb20938bc3))
+* ajuste para build e utilização do componente ([aacc497](https://github.com/rktit/rkt-mobile-components/commit/aacc4975ac260c2bdedcfdca8ac86eef838e6cea))
+* remocao da lib ([3845b88](https://github.com/rktit/rkt-mobile-components/commit/3845b883df73fc1704dd1eee467369ef3e0b562d))
+* update do yarn e build para android ([7f4ed81](https://github.com/rktit/rkt-mobile-components/commit/7f4ed810755b2bf4275ee25d4e63041b9ef734c3))
+
 ## [0.1.15](https://github.com/rktit/rkt-mobile-components/compare/v0.1.14...v0.1.15) (2024-06-03)
 
 ## [0.1.14](https://github.com/rktit/rkt-mobile-components/compare/v0.1.13...v0.1.14) (2024-06-03)
