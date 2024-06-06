@@ -33,3 +33,5 @@ MIT
 ---
 
 Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+
+<!-- //"rkt-mobile-components": "file:./lib/rkt-mobile-components", -->
