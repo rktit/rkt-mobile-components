@@ -1,0 +1,34 @@
+{
+  "translation": {
+    "login": {
+      "formulario": {
+        "titulo": "Faça seu login",
+        "email": "E-mail",
+        "senha": "Senha",
+        "logar": "Logar",
+        "esqueciSenha": "Esqueci minha senha"
+      },
+      "registro": "Ainda não possui cadastro?",
+      "cliqueAqui": "Clique aqui"
+    },
+    "home": {
+      "titulo": "Bem-vindo aos Componentes",
+      "btn": {
+        "botoes": "Botões",
+        "inputs": "Inputs",
+        "containers": "Containers"
+      }
+    },
+    "buttons": {
+      "title": "Interface dos Botões",
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "bordered": "Bordered",
+      "icon": "Icon"
+    },
+    "inputs": {
+      "title": "Interface dos Inputs",
+      "text": "Campo de texto"
+    }
+  }
+}
