@@ -15483,9 +15483,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rkt-mobile-components@file:./node_modules/rkt-mobile-components::locator=rocket_mobile_components%40workspace%3Aexample":
+"rkt-mobile-components@file:./lib/rkt-mobile-components::locator=rocket_mobile_components%40workspace%3Aexample":
   version: 0.1.14
-  resolution: "rkt-mobile-components@file:./node_modules/rkt-mobile-components#./node_modules/rkt-mobile-components::hash=be4a01&locator=rocket_mobile_components%40workspace%3Aexample"
+  resolution: "rkt-mobile-components@file:./lib/rkt-mobile-components#./lib/rkt-mobile-components::hash=be4a01&locator=rocket_mobile_components%40workspace%3Aexample"
   dependencies:
     "@hookform/resolvers": ^3.4.0
     "@react-navigation/native": ^6.1.9
@@ -15619,7 +15619,7 @@ __metadata:
     react-native-svg-transformer: ^1.3.0
     react-query: ^3.39.3
     react-test-renderer: 18.2.0
-    rkt-mobile-components: "file:./node_modules/rkt-mobile-components"
+    rkt-mobile-components: "file:./lib/rkt-mobile-components"
     styled-components: ^6.1.8
     ts-jest: ^29.1.1
     typescript: "*"
