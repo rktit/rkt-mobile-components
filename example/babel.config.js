@@ -1,21 +1,19 @@
-module.exports = function getBabelConfig(api) {
-  api.cache(true);
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
+const pak = require('../package.json');
 
-  const plugins = [
-    'react-native-reanimated/plugin',
+module.exports = {
+  presets: ['module:metro-react-native-babel-preset'],
+  plugins: [
     [
-      require.resolve('babel-plugin-module-resolver'),
+      'module-resolver',
       {
+        extensions: ['.tsx', '.ts', '.js', '.json'],
         alias: {
-          '~': './src',
+          [pak.name]: path.join(__dirname, '..', pak.source),
         },
-        extensions: ['.js', '.ts', '.tsx'],
       },
     ],
-  ];
-
-  return {
-    presets: ['module:metro-react-native-babel-preset'],
-    plugins,
-  };
+    'react-native-reanimated/plugin',
+  ],
 };
