@@ -1,12 +1,13 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import Config from "react-native-config";
-import { Button, Container, Item, Text } from "../../components";
-import { Colors } from "../../styles/themeStyle";
-import { ContentContainer } from "../../containers";
+import { Button, Container, ContentContainer, Item, Text } from "../../components";
+import { useTheme } from "styled-components";
 
 export default function Home() {
   console.log("API_URL:", Config.API_URL);
+
+  const theme = useTheme();
 
   return (
     <Container padding={false}>
@@ -21,7 +22,7 @@ export default function Home() {
           variant="button"
           text="buttons.primary"
           type="primary"
-          color={Colors.primary}
+          color={theme.colors.primary}
         />
       </ContentContainer>
     </Container>

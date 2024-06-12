@@ -1,30 +1,61 @@
-const enum Colors {
-  primary = "#C44040",
-  secondary = "#1A1A1A",
-  black = "#000",
-  white = "#FFF",
-  grey = "#B2B2B2",
-  greyLight = "#F9F9F9",
-  lighter = "#FFFFFF",
-  disabled = "#E3E3E3",
-  success = "#00FF00",
-  error = "#FF0000",
-  errorBackground = "#FFD7D7",
+export type IColor = {
+  primary: string;
+  secondary: string;
+  black: string;
+  white: string;
+  greyLight: string;
+  lighter: string;
+  disabled: string;
+  success: string;
+  error: string;
+  errorBackground: string;
 }
 
-const theme = {
+export type ITheme = {
   app: {
     colors: {
-      primary: Colors.primary,
-      secondary: Colors.secondary,
-      black: Colors.black,
-      white: Colors.white,
-      greyLight: Colors.greyLight,
-      lighter: Colors.lighter,
-      disabled: Colors.disabled,
-      success: Colors.success,
-      error: Colors.error,
-      errorBackground: Colors.errorBackground,
+      primary: string;
+      secondary: string;
+      black: string;
+      white: string;
+      greyLight: string;
+      lighter: string;
+      disabled: string;
+      success: string;
+      error: string;
+      errorBackground: string;
+    };
+    input: any;
+  };
+  colors: any;
+  input: any;
+}
+
+export const baseTheme = {
+  colors: {
+    primary: "#C44040",
+    secondary: "#1A1A1A",
+    black: "#000",
+    white: "#FFF",
+    greyLight: "#B2B2B2",
+    lighter: "#FFFFFF",
+    disabled: "#E3E3E3",
+    success: "#00FF00",
+    error: "#FF0000",
+    errorBackground: "#FFD7D7",
+  },
+  app: {
+    colors: {
+      primary: "#C44040",
+      secondary: "#1A1A1A",
+      black: "#000",
+      white: "#FFF",
+      greyLight: "#B2B2B2",
+      lighter: "#FFFFFF",
+      disabled: "#E3E3E3",
+      success: "#00FF00",
+      error: "#FF0000",
+      errorBackground: "#FFD7D7",
     },
     input: {
       grid: {
@@ -41,12 +72,12 @@ const theme = {
         shadowOpacity: 0.22,
         shadowRadius: 2.22,
         elevation: 3,
-        backgroundColor: Colors.white,
+        backgroundColor: "#FFF",
         borderRadius: 16,
         paddingHorizontal: 8,
         paddingVertical: 2,
         borderWidth: 1,
-        borderColor: Colors.white,
+        borderColor: "#FFF",
       },
       input: {
         width: "100%",
@@ -60,8 +91,8 @@ const theme = {
       },
       error: {
         borderWidth: 1,
-        borderColor: Colors.error,
-        backgroundColor: Colors.errorBackground,
+        borderColor: "#FF0000",
+        backgroundColor: "#FFD7D7",
       },
       helperText: {
         paddingHorizontal: 4,
@@ -70,5 +101,3 @@ const theme = {
     },
   }
 };
-
-export { Colors, theme };

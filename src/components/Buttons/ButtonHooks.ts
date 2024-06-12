@@ -1,4 +1,4 @@
-import { Colors } from "../../styles/themeStyle";
+import { useTheme } from "styled-components";
 import { type FontTypesList } from "../../types/style";
 
 interface IButton {
@@ -8,27 +8,28 @@ interface IButton {
 }
 
 const useButton = (): IButton => {
+  const theme = useTheme();
   const fontColor = (
     disabled: boolean,
     type: string,
     color?: string
   ): string => {
-    if (disabled) return Colors.secondary;
+    if (disabled) return theme.app.colors.secondary;
     switch (type) {
       case "primary":
-        return Colors.black;
+        return theme.app.colors.black;
       case "secondary":
-        return Colors.white;
+        return theme.app.colors.white;
       case "disabled":
-        return Colors.secondary;
+        return theme.app.colors.secondary;
       case "icon":
-        return Colors.secondary;
+        return theme.app.colors.secondary;
       case "rounded":
-        return Colors.white;
+        return theme.app.colors.white;
       case "bordered":
-        return color ?? Colors.primary;
+        return color ?? theme.app.colors.primary;
       default:
-        return Colors.primary;
+        return theme.app.colors.primary;
     }
   };
 

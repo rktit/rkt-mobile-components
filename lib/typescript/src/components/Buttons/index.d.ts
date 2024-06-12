@@ -1,5 +1,5 @@
 import React from "react";
-import { type ImagesList } from "../../assets/images/Svg";
+import { type ImagesList } from "../../assets/svg/Svg";
 import { type SizeTypes } from "../../types/style";
 export type VariantList = "button" | "transparent" | "link" | "icon";
 export type TypesList = "primary" | "secondary" | "transparent" | "disabled" | "icon" | "bordered" | "rounded";

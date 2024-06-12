@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
 import { type DimensionValue, Text as TextBase } from "react-native";
 import { stylesBase, stylesFont } from "../styles/fontStyle";
-import { Colors } from "../styles/themeStyle";
 import { useTranslation } from "react-i18next";
 import { type FontTypesList, type WeightsList } from "../types/style";
+import { useTheme } from 'styled-components/native';
 
 export interface IFonts {
   text: string;
@@ -19,7 +19,7 @@ export interface IFonts {
 const Text = ({
   text,
   type = "paragraph",
-  color = Colors.secondary,
+  color,
   weight = "regular",
   testID = "text-id",
   underline = false,
@@ -27,11 +27,12 @@ const Text = ({
   width,
 }: IFonts): React.ReactNode => {
   const { t } = useTranslation();
+  const theme = useTheme();
 
   return (
     <TextBase
       testID={testID}
-      style={[stylesBase(color)[weight], stylesFont[type], {
+      style={[stylesBase(color ?? theme.colors.black)[weight], stylesFont[type], {
         textDecorationLine: underline ? "underline" : "none",
         textAlign: align,
         width: width,

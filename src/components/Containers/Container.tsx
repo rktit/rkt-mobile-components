@@ -1,22 +1,26 @@
-import React from "react";
-import { View, StyleSheet, type DimensionValue } from "react-native";
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { useTheme } from 'styled-components/native';
 
 interface IContainer {
   children: React.ReactNode;
   padding?: boolean;
-  height?: DimensionValue | undefined;
   color?: string;
   style?: object;
 }
 
 const Container = ({
   children,
-  color = "#F9F9F9",
+  color,
   style,
-  padding = true,
+  padding = true
 }: IContainer) => {
+  const theme = useTheme();
+
   return (
-    <View style={[styles(color, padding).container, style]}>{children}</View>
+    <View style={[styles(color ?? theme.colors.white, padding).container, style]}>
+      {children}
+    </View>
   );
 };
 
@@ -27,9 +31,9 @@ const styles = (color: string, padding: boolean) =>
       paddingHorizontal: padding ? 24 : 0,
       paddingVertical: padding ? 48 : 0,
       backgroundColor: color,
-      alignItems: "center",
-      justifyContent: "center",
-      width: "100%",
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%',
     },
   });
 

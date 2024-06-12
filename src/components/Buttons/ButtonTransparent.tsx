@@ -3,8 +3,8 @@ import { TouchableOpacity } from "react-native";
 import { Text } from "../";
 import useButton from "./ButtonHooks";
 import { type IButton } from ".";
-import Svg from "../../assets/images/Svg";
-import { Colors } from "../../styles/themeStyle";
+import Svg from "../../assets/svg";
+import { useTheme } from "styled-components";
 
 const BtnTransparent = ({
   text,
@@ -17,6 +17,7 @@ const BtnTransparent = ({
   size = "md",
 }: IButton) => {
   const { fontColor, fontSize } = useButton();
+  const theme = useTheme();
 
   return (
     <TouchableOpacity
@@ -39,7 +40,7 @@ const BtnTransparent = ({
           type={fontSize(size)}
           underline={underline}
           text={text ?? ""}
-          color={disabled ? Colors.disabled : color}
+          color={disabled ? theme.colors.disabled : color}
         />
       )}
     </TouchableOpacity>

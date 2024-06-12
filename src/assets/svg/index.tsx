@@ -1,8 +1,8 @@
 import React from "react";
 
-import SvgHideOn from "./SVG/hide-on.svg";
-import SvgHideOff from "./SVG/hide-off.svg";
-import SvgLogo from "./SVG/logo.svg";
+import SvgHideOn from "./hide-on.svg";
+import SvgHideOff from "./hide-off.svg";
+import SvgLogo from "./logo.svg";
 
 export type ImagesList = "hide-on" | "hide-off" | "logo";
 

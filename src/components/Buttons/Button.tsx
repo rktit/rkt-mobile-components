@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity } from "react-native";
 import { Text } from "..";
-import Svg from "../../assets/images/Svg";
+import Svg from "../../assets/svg";
 import { type IButton } from ".";
 import useButton from "./ButtonHooks";
 import {
@@ -10,7 +10,7 @@ import {
   stylesBtnSizes,
   stylesButton,
 } from "../../styles/buttonStyle";
-import { Colors } from "../../styles/themeStyle";
+import { useTheme } from "styled-components";
 
 const Button = ({
   text,
@@ -25,15 +25,16 @@ const Button = ({
   onClick: handleClick,
 }: IButton): React.ReactNode => {
   const { fontColor, iconSize, fontSize } = useButton();
+  const theme = useTheme();
 
   return (
     <TouchableOpacity
       style={[
         stylesBtnDefault(disabled).default,
-        stylesButton(disabled)[type],
+        stylesButton(disabled, theme.colors[type])[type],
         stylesBtnSizes[size],
         shadow && type !== "bordered" && stylesBtnShadow.shadow,
-        { ...style, borderColor: disabled ? Colors.disabled : color },
+        { ...style, borderColor: disabled ? theme.colors.disabled : color },
       ]}
       activeOpacity={0.7}
       onPress={handleClick}

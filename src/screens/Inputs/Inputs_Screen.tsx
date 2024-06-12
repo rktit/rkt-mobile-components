@@ -1,8 +1,13 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-import { Container, Input, Item, Text } from "../../components";
-import { ContentContainer } from "../../containers";
-import useInputs from "./InputHooks";
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import {
+  ContentContainer,
+  Container,
+  Input,
+  Item,
+  Text,
+} from '../../components';
+import useInputs from './InputHooks';
 
 export default function Home() {
   const { control } = useInputs();
@@ -26,6 +31,6 @@ export default function Home() {
 const styles = StyleSheet.create({
   content: {
     flex: 1,
-    justifyContent: "flex-start",
+    justifyContent: 'flex-start',
   },
 });

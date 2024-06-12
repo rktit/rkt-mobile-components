@@ -1,5 +1,5 @@
 import React from "react";
-import { type ImagesList } from "../../assets/images/Svg";
+import { type ImagesList } from "../../assets/svg";
 import BtnTransparent from "./ButtonTransparent";
 import Button from "./Button";
 import BtnIcon from "./ButtonIcon";

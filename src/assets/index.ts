@@ -1,1 +1,2 @@
-export * from './images'
+export { Logo, LogoHorizontal } from './images'
+export { default as SVG } from './svg';

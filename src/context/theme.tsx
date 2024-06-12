@@ -1,15 +1,25 @@
-import React, { createContext } from "react";
-import { ThemeProvider } from "styled-components";
+import React from 'react';
+import { ThemeProvider } from 'styled-components/native';
+import { baseTheme } from '../styles/themeStyle';
 
-interface IThemeProps {
-  children: React.ReactNode;
-  theme: any;
-}
-
-const ThemeContext = createContext({ theme: "light" });
-
-const RktThemeProvider = ({ children, theme }: IThemeProps) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+type IThemeProps = {
+  readonly children: any;
+  readonly theme?: any;
 };
 
-export { ThemeContext, RktThemeProvider };
+function ThemeLibProvider({ children, theme }: IThemeProps) {
+
+  const mergeTheme = (theme: any) => {
+    return {
+      ...baseTheme,
+      ...theme,
+    };
+  };
+
+  const _merge = mergeTheme(theme);
+
+  console.log("🚀 ~ ThemeLibProvider ~ mergedTheme:", _merge)
+  return <ThemeProvider theme={_merge}>{children}</ThemeProvider>;;
+}
+
+export default ThemeLibProvider;

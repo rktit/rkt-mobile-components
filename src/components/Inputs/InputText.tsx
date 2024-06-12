@@ -1,7 +1,7 @@
 import React from "react";
 import { TextInput } from "react-native";
-import { Colors } from "../../styles/themeStyle";
 import { type FieldError } from "react-hook-form";
+import { useTheme } from "styled-components";
 
 interface InputsProps {
   defaultValue?: string;
@@ -15,7 +15,8 @@ interface InputsProps {
 }
 
 const InputText = (props: InputsProps): JSX.Element => {
-  return <TextInput placeholderTextColor={Colors.greyLight} {...props} />;
+  const theme = useTheme();
+  return <TextInput placeholderTextColor={theme.colors.greyLight} {...props} />;
 };
 
 export default InputText;

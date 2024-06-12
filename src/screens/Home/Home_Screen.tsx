@@ -1,14 +1,15 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import Config from "react-native-config";
-import { Button, Container, Item } from "../../components";
-import { Colors } from "../../styles/themeStyle";
-import { ContentContainer } from "../../containers";
+import { Button, Container, ContentContainer, Item } from "../../components";
+
 import { type NavigationProp, useNavigation } from "@react-navigation/native";
 import { type RootStackParamList } from "../../routes/navigationStackParams";
+import { useTheme } from "styled-components";
 
 export default function Home_Screen() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  const theme = useTheme();
   console.log("API_URL:", Config.API_URL);
 
   return (
@@ -18,7 +19,7 @@ export default function Home_Screen() {
           <Button
             text="home.btn.botoes"
             type="bordered"
-            color={Colors.secondary}
+            color={theme.colors.secondary}
             onClick={() => navigation.navigate("Buttons_Screen")}
           />
         </Item>
@@ -26,7 +27,7 @@ export default function Home_Screen() {
           <Button
             text="home.btn.inputs"
             type="bordered"
-            color={Colors.secondary}
+            color={theme.colors.secondary}
             onClick={() => navigation.navigate("Inputs_Screen")}
           />
         </Item>
@@ -35,7 +36,7 @@ export default function Home_Screen() {
             disabled
             text="home.btn.containers"
             type="primary"
-            color={Colors.primary}
+            color={theme.colors.primary}
             onClick={() => navigation.navigate("Buttons_Screen")}
           />
         </Item>

@@ -4,8 +4,6 @@ import { type NavigationProp, useNavigation } from "@react-navigation/native";
 import Animated, { FadeInUp, FadeOut } from "react-native-reanimated";
 
 import { type RootStackParamList } from "../../routes/navigationStackParams";
-import { Colors } from "../../styles/themeStyle";
-
 export default function Splash() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
@@ -30,7 +28,6 @@ export default function Splash() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.secondary,
     alignItems: "center",
     justifyContent: "center",
     width: "100%",

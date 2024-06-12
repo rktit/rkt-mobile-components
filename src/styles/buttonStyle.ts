@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors } from "./themeStyle";
+import { DynamicStyleSheet } from "../utils/style";
 
 export const stylesBtnDefault = (disabled: boolean) =>
   StyleSheet.create({
@@ -14,48 +14,47 @@ export const stylesBtnDefault = (disabled: boolean) =>
     },
   });
 
-export const stylesBtnIcon = (disabled: boolean) =>
-  StyleSheet.create({
-    default: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "center",
-      alignItems: "center",
-      borderRadius: 48,
-      opacity: disabled ? 0.5 : 1,
-    },
-  });
+export const stylesBtnIcon = (disabled: boolean) => StyleSheet.create({
+  default: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 48,
+    opacity: disabled ? 0.5 : 1,
+  },
+});
 
-export const stylesButton = (disabled: boolean) =>
-  StyleSheet.create({
+export const stylesButton = (disabled: boolean, color: string) =>
+  DynamicStyleSheet.create((theme) => ({
     transparent: {
       backgroundColor: "transparent",
     },
     primary: {
-      backgroundColor: disabled ? Colors.disabled : Colors.primary,
+      backgroundColor: disabled ? theme.app.colors.disabled : color,
     },
     secondary: {
-      backgroundColor: disabled ? Colors.disabled : Colors.secondary,
+      backgroundColor: disabled ? theme.app.colors.disabled : color,
     },
     disabled: {
-      backgroundColor: disabled ? Colors.disabled : Colors.greyLight,
+      backgroundColor: disabled ? theme.app.colors.disabled : color,
     },
     icon: {
       backgroundColor: "transparent",
     },
     rounded: {
-      backgroundColor: disabled ? Colors.disabled : Colors.secondary,
+      backgroundColor: disabled ? theme.app.colors.disabled : color,
     },
     bordered: {
       backgroundColor: "transparent",
       borderWidth: disabled ? 0.5 : 1,
     },
     underline: {},
-  });
+  }));
 
-export const stylesBtnShadow = StyleSheet.create({
+export const stylesBtnShadow = DynamicStyleSheet.create((theme) => ({
   shadow: {
-    shadowColor: "#000",
+    shadowColor: theme.app.colors.black,
     shadowOffset: {
       width: 0,
       height: 2,
@@ -64,7 +63,7 @@ export const stylesBtnShadow = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-});
+}));
 
 export const stylesBtnSizes = StyleSheet.create({
   lg: {

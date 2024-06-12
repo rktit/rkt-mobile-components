@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "../components";
-import { Colors } from "../styles/themeStyle";
+import Container from "./Container";
+import { useTheme } from "styled-components";
 
 interface IContentContainer {
   readonly children: React.ReactNode;
@@ -15,8 +15,9 @@ export default function ContentContainer({
   padding = true,
   style,
 }: IContentContainer) {
+  const theme = useTheme();
   return (
-    <Container padding={padding} style={[style, { backgroundColor: color ?? Colors.greyLight }]}>
+    <Container padding={padding} style={[style, { backgroundColor: color ?? theme.colors.greyLight }]}>
       {children}
     </Container>
   );

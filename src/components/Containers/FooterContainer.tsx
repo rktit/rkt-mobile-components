@@ -1,16 +1,17 @@
 import React from "react";
-import { Container } from "../components";
-import { Colors } from "../styles/themeStyle";
+import Container from "./Container";
+import { useTheme } from "styled-components/native";
 
 interface IFooterContainer {
   readonly children: React.ReactNode;
 }
 
 export default function FooterContainer({ children }: IFooterContainer) {
+  const theme = useTheme();
+
   return (
     <Container
-      height={70}
-      color={Colors.white}
+      color={theme.colors.white}
       padding={false}
       style={{
         borderTopLeftRadius: 8,
@@ -20,7 +21,7 @@ export default function FooterContainer({ children }: IFooterContainer) {
         paddingHorizontal: 0,
         flexDirection: "row",
         borderWidth: 1,
-        borderColor: Colors.greyLight,
+        borderColor: theme.colors.greyLight,
       }}
     >
       {children}
