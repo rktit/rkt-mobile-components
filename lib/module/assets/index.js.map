@@ -1,1 +1,1 @@
-{"version":3,"names":[],"sourceRoot":"..\\..\\..\\src","sources":["assets/index.ts"],"mappings":"AAAA,cAAc,UAAU","ignoreList":[]}
+{"version":3,"names":["Logo","LogoHorizontal","default","SVG"],"sourceRoot":"..\\..\\..\\src","sources":["assets/index.ts"],"mappings":"AAAA,SAASA,IAAI,EAAEC,cAAc,QAAQ,UAAU;AAC/C,SAASC,OAAO,IAAIC,GAAG,QAAQ,OAAO","ignoreList":[]}

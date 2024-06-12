@@ -1,4 +1,3 @@
-import { Colors } from "./themeStyle";
 export declare const stylesBtnDefault: (disabled: boolean) => {
     default: {
         display: "flex";
@@ -20,24 +19,24 @@ export declare const stylesBtnIcon: (disabled: boolean) => {
         opacity: number;
     };
 };
-export declare const stylesButton: (disabled: boolean) => {
+export declare const stylesButton: (disabled: boolean, color: string) => {
     transparent: {
         backgroundColor: string;
     };
     primary: {
-        backgroundColor: Colors;
+        backgroundColor: string;
     };
     secondary: {
-        backgroundColor: Colors;
+        backgroundColor: string;
     };
     disabled: {
-        backgroundColor: Colors;
+        backgroundColor: string;
     };
     icon: {
         backgroundColor: string;
     };
     rounded: {
-        backgroundColor: Colors;
+        backgroundColor: string;
     };
     bordered: {
         backgroundColor: string;

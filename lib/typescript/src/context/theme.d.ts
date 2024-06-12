@@ -1,11 +1,8 @@
-import React from "react";
-interface IThemeProps {
-    children: React.ReactNode;
-    theme: any;
-}
-declare const ThemeContext: React.Context<{
-    theme: string;
-}>;
-declare const RktThemeProvider: ({ children, theme }: IThemeProps) => React.JSX.Element;
-export { ThemeContext, RktThemeProvider };
+import React from 'react';
+type IThemeProps = {
+    readonly children: any;
+    readonly theme?: any;
+};
+declare function ThemeLibProvider({ children, theme }: IThemeProps): React.JSX.Element;
+export default ThemeLibProvider;
 //# sourceMappingURL=theme.d.ts.map

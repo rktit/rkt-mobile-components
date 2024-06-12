@@ -1,6 +1,5 @@
 /// <reference types="react" />
 import { View } from "react-native";
-import { Colors } from "./themeStyle";
 declare const stylesInput: {
     grid: {
         paddingHorizontal: number;
@@ -16,12 +15,12 @@ declare const stylesInput: {
         shadowOpacity: number;
         shadowRadius: number;
         elevation: number;
-        backgroundColor: Colors;
+        backgroundColor: any;
         borderRadius: number;
         paddingHorizontal: number;
         paddingVertical: number;
         borderWidth: number;
-        borderColor: Colors;
+        borderColor: any;
     };
     input: {
         width: "100%";
@@ -35,8 +34,8 @@ declare const stylesInput: {
     };
     error: {
         borderWidth: number;
-        borderColor: Colors;
-        backgroundColor: Colors;
+        borderColor: any;
+        backgroundColor: any;
     };
     helperText: {
         paddingHorizontal: number;

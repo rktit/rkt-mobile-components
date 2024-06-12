@@ -1,29 +1,59 @@
-declare const enum Colors {
-    primary = "#C44040",
-    secondary = "#1A1A1A",
-    black = "#000",
-    white = "#FFF",
-    grey = "#B2B2B2",
-    greyLight = "#F9F9F9",
-    lighter = "#FFFFFF",
-    disabled = "#E3E3E3",
-    success = "#00FF00",
-    error = "#FF0000",
-    errorBackground = "#FFD7D7"
-}
-declare const theme: {
+export type IColor = {
+    primary: string;
+    secondary: string;
+    black: string;
+    white: string;
+    greyLight: string;
+    lighter: string;
+    disabled: string;
+    success: string;
+    error: string;
+    errorBackground: string;
+};
+export type ITheme = {
     app: {
         colors: {
-            primary: Colors;
-            secondary: Colors;
-            black: Colors;
-            white: Colors;
-            greyLight: Colors;
-            lighter: Colors;
-            disabled: Colors;
-            success: Colors;
-            error: Colors;
-            errorBackground: Colors;
+            primary: string;
+            secondary: string;
+            black: string;
+            white: string;
+            greyLight: string;
+            lighter: string;
+            disabled: string;
+            success: string;
+            error: string;
+            errorBackground: string;
+        };
+        input: any;
+    };
+    colors: any;
+    input: any;
+};
+export declare const baseTheme: {
+    colors: {
+        primary: string;
+        secondary: string;
+        black: string;
+        white: string;
+        greyLight: string;
+        lighter: string;
+        disabled: string;
+        success: string;
+        error: string;
+        errorBackground: string;
+    };
+    app: {
+        colors: {
+            primary: string;
+            secondary: string;
+            black: string;
+            white: string;
+            greyLight: string;
+            lighter: string;
+            disabled: string;
+            success: string;
+            error: string;
+            errorBackground: string;
         };
         input: {
             grid: {
@@ -40,12 +70,12 @@ declare const theme: {
                 shadowOpacity: number;
                 shadowRadius: number;
                 elevation: number;
-                backgroundColor: Colors;
+                backgroundColor: string;
                 borderRadius: number;
                 paddingHorizontal: number;
                 paddingVertical: number;
                 borderWidth: number;
-                borderColor: Colors;
+                borderColor: string;
             };
             input: {
                 width: string;
@@ -59,8 +89,8 @@ declare const theme: {
             };
             error: {
                 borderWidth: number;
-                borderColor: Colors;
-                backgroundColor: Colors;
+                borderColor: string;
+                backgroundColor: string;
             };
             helperText: {
                 paddingHorizontal: number;
@@ -69,5 +99,4 @@ declare const theme: {
         };
     };
 };
-export { Colors, theme };
 //# sourceMappingURL=themeStyle.d.ts.map
